@@ -7,13 +7,20 @@ const SingleItem = ({
   handleRemove,
 }) => {
   return (
-    <div>
+    <div className='single-item'>
       <input
         type='checkbox'
         checked={completed}
         onChange={() => handleCompleted(id, index)}
       />
-      <p>{name}</p>
+      <p
+        style={{
+          textTransform: 'capitalize',
+          textDecoration: completed && 'line-through',
+        }}
+      >
+        {name}
+      </p>
       <button
         type='button'
         className='btn remove-btn'

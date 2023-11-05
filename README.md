@@ -1,4 +1,4 @@
-# React Course
+git # React Course
 
 If you enjoy the content and my teaching style, you can always enroll in the full course (link below)
 

@@ -2,7 +2,7 @@ import SingleItem from './SingleItem';
 
 const Items = ({ items, handleCompleted, handleRemove }) => {
   return (
-    <div>
+    <div className='items'>
       {items.map((item, index) => {
         return (
           <SingleItem

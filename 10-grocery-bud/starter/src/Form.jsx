@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Form = ({ addItems }) => {
   const [showText, setShowText] = useState('');
@@ -7,10 +8,15 @@ const Form = ({ addItems }) => {
     <form
       onSubmit={(e) => {
         e.preventDefault();
+        if (!showText) {
+          toast.error('please provide value');
+          return;
+        }
+        setShowText('');
         addItems(showText);
       }}
     >
-      <h4>grocery bud</h4>
+      <h4>task bud</h4>
       <div className='form-control'>
         <input
           type='text'
